@@ -10,6 +10,24 @@
     -->
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
+    <!-- <style>
+      #eighth-part table tr td {
+        display: flex;
+        justify-content: center;
+      }
+      #date::after {
+        content: '____/______';
+      }
+      #date::before {
+        content: '____/';
+      }
+      #assinatura-tecnico::after {
+        content: '____________________________';
+      }
+      #assinatura-acidentado::after {
+        content: '____________________________';
+      }
+    </style> -->
   </head>
   <body>
     <header>
@@ -49,18 +67,174 @@
     </header>
 
     <main>
-      <table border="1" cellpadding="0" cellspacing="0" style="width: 100%">
-        <tbody>
+      <section id="first-part">
+        <table border="1" cellpadding="0" cellspacing="0" style="width: 100%">
+          <tbody>
+            <tr>
+              <td class="title-info">Empresa:</td>
+              <td class="title-info">Base:</td>
+              <td class="title-info">Líder do colaborador:</td>
+              <td class="title-info">Técnico de Segurança:</td>
+            </tr>
+            <tr>
+              <td>{{{empresa}}}</td>
+              <td>{{{base}}}</td>
+              <td>{{{liderColaborador}}}</td>
+              <td>{{{tecSeguranca}}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="second-part">
+        <table border="1" cellpadding="0" cellspacing="0" style="width: 100%">
+          <tbody>
+            <tr>
+              <td class="title-info">1. Nome do Acidentado</td>
+              <td class="title-info">2. Função</td>
+            </tr>
+            <tr>
+              <td>{{{}}}</td>
+              <td>{{{}}}</td>
+            </tr>
+            <tr>
+              <td class="title-info">3. Data de Nascimento</td>
+              <td class="title-info">4. Data da Admissão</td>
+              <td class="title-info">5. Turno de Trabalho</td>
+            </tr>
+            <tr>
+              <td>{{{}}}</td>
+              <td>{{{}}}</td>
+              <td>{{{}}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="third-part">
+        <table border="1" cellpadding="0" cellspacing="0" style="width: 100%">
+          <tbody>
+            <tr>
+              <td class="title-info">6. Data do acidente</td>
+              <td class="title-info">7. Hora do acidente</td>
+              <td class="title-info">8. Local do acidente</td>
+              <td class="title-info">9. Parte(s) do corpo atingida(s)</td>
+              <td class="title-info">10. Agente causador</td>
+            </tr>
+            <tr>
+              <td>{{{}}}</td>
+              <td>{{{}}}</td>
+              <td>{{{}}}</td>
+              <td>{{{}}}</td>
+              <td>{{{}}}</td>
+            </tr>
+            <tr>
+              <td class="title-info">11. Natureza da lesão (CID)</td>
+              <td class="title-info">12. Teve afastamento?</td>
+              <td class="title-info">13. Dias de afastamento</td>
+              <td class="title-info">14. Tipo</td>
+            </tr>
+            <tr>
+              <td>{{{}}}</td>
+              <td>{{{}}}</td>
+              <td>{{{}}}</td>
+              <td>{{{}}}</td>
+            </tr>
+            <tr>
+              <td><span class="title-info">Obs.:</span> {{{}}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="fourth-part">
+        <table border="1" cellpadding="0" cellspacing="0" style="width: 100%">
+          <tbody>
+            <tr>
+              <td class="title-info">
+                15. Descrição da ocorrência do acidente (Que trabalho era feito?
+                Com qual objetivo? Como era realizado? Como aconteceu o
+                acidente? Qual a consequencia?):
+              </td>
+            </tr>
+            <tr>
+              <td>{{{}}}</td>
+            </tr>
+            <tr>
+              <td class="title-info">
+                16. Teve testumunha? Se sim, escrever o relato da testemunha.
+              </td>
+            </tr>
+            <tr>
+              <td>{{{}}}</td>
+            </tr>
+            <aside>{{{}}}</aside>
+            <tr>
+              <td class="title-info">
+                17. Fotos / Simulação da ocorrência do acidente:
+              </td>
+            </tr>
+            <tr>
+              <td>{{{}}}</td>
+            </tr>
+            <tr>
+              <td class="title-info">18. Informações Complementares</td>
+            </tr>
+            <tr>
+              <td>{{{}}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="part-fifth">
+        <table border="1" cellpadding="0" cellspacing="0" style="width: 100%">
+          <tbody></tbody>
+        </table>
+      </section>
+      <section id="part-sixth">
+        <table border="1" cellpadding="0" cellspacing="0" style="width: 100%">
+          <tbody>
+            <tr>
+              <td class="title-info">
+                20. Causas imediatas que contribuiram diretamente para
+                ocorrência do acidente:
+              </td>
+            </tr>
+            <tr>
+              <td>{{{}}}</td>
+            </tr>
+            <tr>
+              <td class="title-info">
+                21. Causas Básicas (Fatores pessoais e/ou fatores de trabalho
+                que contribuiram para ocorrência do acidente)
+              </td>
+            </tr>
+            <tr>
+              <td>{{{}}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="part-seventh">
+        <table border="1" cellpadding="0" cellspacing="0" style="width: 100%">
+          <tbody></tbody>
+        </table>
+      </section>
+      <section id="eighth-part">
+        <table>
           <tr>
-            <td>s</td>
-            <td>s</td>
-            <td>s</td>
-            <td>s</td>
-            <td>s</td>
-            <td>s</td>
+            <td>
+              <span id="assinatura-acidentado"></span>
+              <p>Acidentado</p>
+            </td>
+            <td>
+              <span id="assinatura-tecnico"></span>
+              <p>Técnico de Segurança</p>
+            </td>
+            <td>
+              <span id="date"></span>
+              <p>Data</p>
+            </td>
           </tr>
-        </tbody>
-      </table>
+        </table>
+      </section>
     </main>
   </body>
 </html>
