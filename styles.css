@@ -1,7 +1,28 @@
+#second-part,
+#third-part,
+#fourth-part,
+#part-fifth,
+#part-sixth,
+#part-seventh {
+  margin-top: 0.35rem;
+}
+
+#eighth-part {
+  margin-top: 5rem;
+}
+
+.title-info {
+  background-color: #e2e2e2;
+}
+
+.info-text {
+  padding: 0.2rem;
+}
+
 #eighth-part table tr td {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 #date::after {
