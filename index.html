@@ -8,12 +8,33 @@
       Need a visual blank slate?
       Remove all code in `styles.css`!
     -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-    <!-- <style>
+    <style>
+      #second-part,
+      #third-part,
+      #fourth-part,
+      #part-fifth,
+      #part-sixth,
+      #part-seventh {
+        margin-top: 0.35rem;
+      }
+
+      #eighth-part {
+        margin-top: 5rem;
+      }
+
+      .title-info {
+        background-color: #e2e2e2;
+      }
+
+      .info-text {
+        padding: 0.2rem;
+      }
+
       #eighth-part table tr td {
         display: flex;
+        align-items: center;
         justify-content: center;
+        flex-direction: column;
       }
       #date::after {
         content: '____/______';
@@ -27,7 +48,9 @@
       #assinatura-acidentado::after {
         content: '____________________________';
       }
-    </style> -->
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
   </head>
   <body>
     <header>
@@ -68,7 +91,12 @@
 
     <main>
       <section id="first-part">
-        <table border="1" cellpadding="0" cellspacing="0" style="width: 100%">
+        <table
+          border="1"
+          cellpadding="0"
+          cellspacing="0"
+          style="width: 100%; text-align: center"
+        >
           <tbody>
             <tr>
               <td class="title-info">Empresa:</td>
@@ -86,7 +114,12 @@
         </table>
       </section>
       <section id="second-part">
-        <table border="1" cellpadding="0" cellspacing="0" style="width: 100%">
+        <table
+          border="1"
+          cellpadding="0"
+          cellspacing="0"
+          style="width: 100%; text-align: center"
+        >
           <tbody>
             <tr>
               <td style="width: 300px" class="title-info">
@@ -95,8 +128,8 @@
               <td colspan="2" class="title-info">2. Função</td>
             </tr>
             <tr>
-              <td class="info-text">{{{}}}</td>
-              <td colspan="2" class="info-text">{{{}}}</td>
+              <td class="info-text">{{{nomeAcidentado}}}</td>
+              <td colspan="2" class="info-text">{{{funcao}}}</td>
             </tr>
             <tr>
               <td style="width: 100px" class="title-info">
@@ -106,15 +139,20 @@
               <td class="title-info">5. Turno de Trabalho</td>
             </tr>
             <tr>
-              <td class="info-text">{{{}}}</td>
-              <td class="info-text">{{{}}}</td>
-              <td class="info-text">{{{}}}</td>
+              <td class="info-text">{{{dataNascimento}}}</td>
+              <td class="info-text">{{{dataAdmissao}}}</td>
+              <td class="info-text">{{{turnoTrabalho}}}</td>
             </tr>
           </tbody>
         </table>
       </section>
       <section id="third-part">
-        <table border="1" cellpadding="0" cellspacing="0" style="width: 100%">
+        <table
+          border="1"
+          cellpadding="0"
+          cellspacing="0"
+          style="width: 100%; text-align: center"
+        >
           <tbody>
             <tr>
               <td class="title-info">6. Data do acidente</td>
@@ -124,23 +162,25 @@
               <td class="title-info">10. Agente causador</td>
             </tr>
             <tr>
-              <td class="info-text">{{{}}}</td>
-              <td class="info-text">{{{}}}</td>
-              <td class="info-text">{{{}}}</td>
-              <td class="info-text">{{{}}}</td>
-              <td class="info-text">{{{}}}</td>
+              <td class="info-text">{{{dataAcidente}}}</td>
+              <td class="info-text">{{{horaAcidente}}}</td>
+              <td class="info-text">{{{localAcidente}}}</td>
+              <td class="info-text">{{{parteCorpo}}}</td>
+              <td class="info-text">{{{agenteCausador}}}</td>
             </tr>
             <tr>
               <td class="title-info">11. Natureza da lesão (CID)</td>
               <td class="title-info">12. Teve afastamento?</td>
               <td class="title-info">13. Dias de afastamento</td>
-              <td class="title-info">14. Tipo</td>
+              <td colspan="2" class="title-info">14. Tipo</td>
             </tr>
             <tr>
-              <td class="info-text">{{{}}}</td>
-              <td class="info-text">{{{}}}</td>
-              <td class="info-text">{{{}}}</td>
-              <td class="info-text">{{{}}}</td>
+              <td class="info-text">{{{cid}}}</td>
+              <td class="info-text">{{{afastamento}}}</td>
+              <td class="info-text">{{{diasAfastado}}}</td>
+              <td colspan="2" class="info-text">
+                {{{tipo}}}Com danos materiais {{{tipo}}}Sem danos materiais
+              </td>
             </tr>
             <tr>
               <td class="info-text">
@@ -161,7 +201,7 @@
               </td>
             </tr>
             <tr>
-              <td class="info-text">{{{}}}</td>
+              <td class="info-text">{{{descricaoOcorrencia}}}</td>
             </tr>
             <tr>
               <td class="title-info">
@@ -169,7 +209,7 @@
               </td>
             </tr>
             <tr>
-              <td class="info-text">{{{}}}</td>
+              <td class="info-text">{{{teveTestumunha}}}</td>
             </tr>
             <aside class="info-text">{{{}}}</aside>
             <tr>
@@ -223,10 +263,15 @@
         </table>
       </section>
       <section id="part-seventh">
-        <table border="1" cellpadding="0" cellspacing="0" style="width: 100%">
+        <table
+          border="1"
+          cellpadding="0"
+          cellspacing="0"
+          style="width: 100%; text-align: center"
+        >
           <tbody>
             <tr>
-              <td>d</td>
+              {{{actions}}}
             </tr>
           </tbody>
         </table>
