@@ -37,3 +37,6 @@
 #assinatura-acidentado::after {
   content: '____________________________';
 }
+.quiz {
+  padding-left: 12px;
+}

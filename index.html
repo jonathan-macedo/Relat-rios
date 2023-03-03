@@ -14,7 +14,8 @@
       #fourth-part,
       #part-fifth,
       #part-sixth,
-      #part-seventh {
+      #part-seventh,
+      #nine-part {
         margin-top: 0.35rem;
       }
 
@@ -47,6 +48,12 @@
       }
       #assinatura-acidentado::after {
         content: '____________________________';
+      }
+      .quiz {
+        padding-left: 12px;
+      }
+      .quiz .selecao-quiz {
+        margin-top: 1px;
       }
     </style>
     <link rel="stylesheet" href="styles.css" />
@@ -179,17 +186,18 @@
               <td class="info-text">{{{afastamento}}}</td>
               <td class="info-text">{{{diasAfastado}}}</td>
               <td colspan="2" class="info-text">
-                {{{tipo}}}Com danos materiais {{{tipo}}}Sem danos materiais
+                {{{select1}}} Com danos materiais <br />
+                {{{select2}}} Sem danos materiais
               </td>
             </tr>
             <tr>
-              <td class="info-text">
-                <span class="title-info">Obs.:</span> {{{}}}
-              </td>
+              <td class="title-info" style="height: 50px">Observação.:</td>
+              <td colspan="4">{{{observacao}}}</td>
             </tr>
           </tbody>
         </table>
       </section>
+      <section id="nine-part">{{{pessoasAdicionais}}}</section>
       <section id="fourth-part">
         <table border="1" cellpadding="0" cellspacing="0" style="width: 100%">
           <tbody>
@@ -211,20 +219,20 @@
             <tr>
               <td class="info-text">{{{teveTestumunha}}}</td>
             </tr>
-            <aside class="info-text">{{{}}}</aside>
+
             <tr>
               <td class="title-info">
                 17. Fotos / Simulação da ocorrência do acidente:
               </td>
             </tr>
             <tr>
-              <td class="info-text">{{{}}}</td>
+              <td class="info-text">{{{fotosSimulacao}}}</td>
             </tr>
             <tr>
               <td class="title-info">18. Informações Complementares</td>
             </tr>
             <tr>
-              <td class="info-text">{{{}}}</td>
+              <td class="info-text">{{{informacoesMais}}}</td>
             </tr>
           </tbody>
         </table>
@@ -233,7 +241,60 @@
         <table border="1" cellpadding="0" cellspacing="0" style="width: 100%">
           <tbody>
             <tr>
-              <td>d</td>
+              <td>
+                <div class="quiz">
+                  <p>Conhecido e feito diariamente.</p>
+                  <p class="selecao-quiz">{{{select3}}}Sim {{{select4}}}Não</p>
+                  <p>Conhecido e feito formal eventual.</p>
+                  <p class="selecao-quiz">{{{select5}}}Sim {{{select6}}}Não</p>
+                  <p>
+                    Conhecido, feito com frequencia, mas, por outro trabalhador.
+                  </p>
+                  <p class="selecao-quiz">{{{select7}}}Sim {{{select8}}}Não</p>
+                  <p>Novo, feito pela primeira vez.</p>
+                  <p class="selecao-quiz">{{{select9}}}Sim {{{select10}}}Não</p>
+                  <p>Raro / Não frequente.</p>
+                  <p class="selecao-quiz">
+                    {{{select11}}}Sim {{{select12}}}Não
+                  </p>
+                  <p>Supervisionamento por outra pessoa.</p>
+                  <p class="selecao-quiz">
+                    {{{select13}}}Sim {{{select14}}}Não
+                  </p>
+                  <p>Sozinho?</p>
+                  <p class="selecao-quiz">
+                    {{{select15}}}Sim {{{select16}}}Não
+                  </p>
+                </div>
+              </td>
+              <td>
+                <div class="quiz">
+                  <p>Recebeu treinamento para a função</p>
+                  <p class="selecao-quiz">
+                    {{{select17}}}Sim {{{select18}}}Não
+                  </p>
+                  <p>Havia procedimento para execução</p>
+                  <p class="selecao-quiz">
+                    {{{select19}}}Sim {{{select20}}}Não
+                  </p>
+                  <p>Se havia, o colaborador entendeu?</p>
+                  <p class="selecao-quiz">
+                    {{{select21}}}Sim {{{select22}}}Não
+                  </p>
+                  <p>Faltou equipamento de proteção individual</p>
+                  <p class="selecao-quiz">
+                    {{{select23}}}Sim {{{select24}}}Não
+                  </p>
+                  <p>O(s) EPI's estavam em perfeitas condições de uso?</p>
+                  <p class="selecao-quiz">
+                    {{{select25}}}Sim {{{select26}}}Não
+                  </p>
+                  <p>Utilizava algum utensilio ou equipar</p>
+                  <p class="selecao-quiz">
+                    {{{select27}}}Sim {{{select28}}}Não
+                  </p>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -248,7 +309,7 @@
               </td>
             </tr>
             <tr>
-              <td class="info-text">{{{}}}</td>
+              <td class="info-text">{{{causasImediatas}}}</td>
             </tr>
             <tr>
               <td class="title-info">
@@ -257,7 +318,7 @@
               </td>
             </tr>
             <tr>
-              <td class="info-text">{{{}}}</td>
+              <td class="info-text">{{{causasBasicas}}}</td>
             </tr>
           </tbody>
         </table>
