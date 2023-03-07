@@ -12,7 +12,7 @@
 }
 
 .title-info {
-  background-color: #e2e2e2;
+  background-color: #f1f1f1;
 }
 
 .info-text {
@@ -39,4 +39,10 @@
 }
 .quiz {
   padding-left: 12px;
+}
+
+header,
+main {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
 }
